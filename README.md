@@ -1,34 +1,22 @@
-# Active Directory Enumeration and Attacks - Skills Assessments 
+# Evaluación de Habilidades - Enumeración y Ataques de Active Directory
 
-Welcome to the repository for the **Active Directory Enumeration and Attacks - Skills Assessments**. This project showcases the process of identifying and exploiting common misconfigurations and vulnerabilities in an Active Directory environment as part of an internal penetration test. The walkthrough includes step-by-step details on enumeration, credential harvesting, lateral movement, privilege escalation, and domain compromise.
+Este repositorio contiene la documentación de las evaluaciones de habilidades del módulo "Enumeración y Ataques de Active Directory" del curso de Hack The Box. Incluye la resolución detallada de escenarios prácticos, el uso de diversas herramientas y la aplicación de técnicas para comprometer dominios en entornos simulados de Active Directory.
 
-## Tools and Techniques Used
+## Herramientas Utilizadas
 
-### Enumeration
-- **Responder**: Network poisoning to capture hashes.
-- **rpcclient**: Domain user enumeration.
-- **Kerbrute**: Password spraying to identify weak credentials.
-- **CrackMapExec (CME)** and **smbmap**: For SMB enumeration and access.
-- **BloodHound-python**: Analyzing AD permissions and relationships.
+Durante el desarrollo de estas evaluaciones, se emplearon las siguientes herramientas:
 
-### Credential Cracking and Management
-- **hashcat**: Cracking password hashes with common dictionaries.
-- **mimikatz**: Extracting NTLM hashes and performing DCSync.
+- **Responder**: Para envenenar la red y capturar hashes NTLM.
+- **Hashcat**: Para descifrar hashes y obtener contraseñas en texto claro.
+- **Evil-WinRM**: Para acceso remoto a sistemas Windows con privilegios.
+- **Rpcclient**: Para enumerar usuarios de dominio.
+- **Kerbrute**: Para ataques de password spraying.
+- **CrackMapExec**: Para exploración y explotación de recursos compartidos.
+- **Smbmap**: Para enumerar y descargar archivos desde recursos compartidos.
+- **Mssqlclient.py**: Para interactuar con bases de datos MSSQL.
+- **GodPotato**: Para aprovechar el privilegio SeImpersonatePrivilege y escalar privilegios.
+- **Mimikatz**: Para obtener credenciales en texto claro, hashes y realizar ataques DCSync.
+- **BloodHound**: Para analizar relaciones y permisos en Active Directory.
+- **Psexec.py**: Para ejecutar comandos de manera remota utilizando Pass-The-Hash.
 
-### Exploitation
-- **evil-winrm**: Remote access to Windows systems.
-- **psexec**: Pass-The-Hash attacks and command execution.
-- **GodPotato**: Privilege escalation exploiting `SeImpersonatePrivilege`.
-- **mssqlclient.py**: Exploiting MSSQL servers and executing commands.
-
-### File Transfer and Utilities
-- **certutil**: Downloading tools directly to the target.
-- **nc.exe**: Establishing reverse shells.
-- **Python SimpleHTTPServer**: Hosting files for transfer.
-
-### Other Utilities
-- **awk**: Parsing domain user lists.
-- **xfreerdp**: RDP connections to target systems.
-
-## Disclaimer
-This repository is for **educational purposes only**. Unauthorized use of these techniques in real-world environments is illegal and unethical.
+Cada herramienta fue seleccionada y utilizada estratégicamente para cumplir con los objetivos de cada escenario.
